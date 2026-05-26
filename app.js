@@ -3,7 +3,7 @@
 
   // --- Constants ---
   const STORAGE_KEY = 'baby_tracker_events';
-  const ICONS = { diaper: '🧷', urine: '💧', motion: '💩', feeding: '🍼' };
+  const ICONS = { diaper: '👶', urine: '💧', motion: '💩', feeding: '🍼' };
   const LABELS = { diaper: 'Diaper Change', urine: 'Urine', motion: 'Motion', feeding: 'Feeding' };
 
 
