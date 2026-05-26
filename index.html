@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Baby Tracker">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="manifest" href="manifest.json">
+  <title>Baby Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Baby Tracker</h1>
+    </header>
+
+    <nav class="tab-bar">
+      <button class="tab active" data-tab="actions">Log</button>
+      <button class="tab" data-tab="history">History</button>
+    </nav>
+
+    <main>
+      <!-- Actions View -->
+      <section id="actions-view" class="view active">
+        <div class="action-grid">
+          <button class="action-btn" data-type="diaper">
+            <span class="action-icon">🧷</span>
+            <span class="action-label">Diaper Change</span>
+          </button>
+          <button class="action-btn" data-type="urine">
+            <span class="action-icon">💧</span>
+            <span class="action-label">Urine</span>
+          </button>
+          <button class="action-btn" data-type="motion">
+            <span class="action-icon">💩</span>
+            <span class="action-label">Motion</span>
+          </button>
+          <button class="action-btn" data-type="feeding">
+            <span class="action-icon">🍼</span>
+            <span class="action-label">Feeding</span>
+          </button>
+        </div>
+
+        <!-- Feeding Timer -->
+        <div id="timer-panel" class="timer-panel hidden">
+          <div class="timer-display" id="timer-display">00:00</div>
+          <div class="timer-controls">
+            <button id="timer-start" class="timer-btn start">Start</button>
+            <button id="timer-stop" class="timer-btn stop hidden">Stop & Save</button>
+            <button id="timer-cancel" class="timer-btn cancel">Cancel</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- History View -->
+      <section id="history-view" class="view">
+        <div id="history-list" class="history-list">
+          <p class="empty-state">No events logged yet</p>
+        </div>
+        <button id="clear-history" class="clear-btn hidden">Clear All</button>
+      </section>
+    </main>
+
+    <!-- Toast notification -->
+    <div id="toast" class="toast hidden"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
