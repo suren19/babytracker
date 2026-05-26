@@ -3,6 +3,7 @@
   "short_name": "BabyTrack",
   "description": "Track baby's diaper changes, urine, motion, and feeding",
   "start_url": "./",
+  "scope":"./",
   "display": "standalone",
   "background_color": "#f8f9fa",
   "theme_color": "#4a90d9",
