@@ -20,6 +20,7 @@
     <nav class="tab-bar">
       <button class="tab active" data-tab="actions">Log</button>
       <button class="tab" data-tab="history">History</button>
+      <button class="tab" data-tab="stats">Stats</button>
     </nav>
 
     <main>
@@ -49,10 +50,24 @@
 
       <!-- History View -->
       <section id="history-view" class="view">
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="diaper">👶</button>
+          <button class="filter-btn" data-filter="urine">💧</button>
+          <button class="filter-btn" data-filter="motion">💩</button>
+          <button class="filter-btn" data-filter="feeding">🍼</button>
+        </div>
         <div id="history-list" class="history-list">
           <p class="empty-state">No events logged yet</p>
         </div>
         <button id="clear-history" class="clear-btn hidden">Clear All</button>
+      </section>
+
+      <!-- Stats View -->
+      <section id="stats-view" class="view">
+        <div id="stats-content" class="stats-content">
+          <p class="empty-state">No events logged yet</p>
+        </div>
       </section>
     </main>
 
